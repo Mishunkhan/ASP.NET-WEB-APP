@@ -1,0 +1,914 @@
+/* ******************************  DEFAULT DESIGN FOR ALL HTML PAGES ****************************** */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #7c116b;
+    text-decoration: underline;
+}
+
+html {
+    font-size: 12px;
+    position: relative;
+    min-height: 100%;
+}
+
+h1 {
+    font-size: calc(1.375rem + 1.1vw);
+}
+
+.text-info {
+    color: #712c66 !important;
+}
+
+.alert-success {
+    color: #712c66;
+    text-align: center;
+    background-color: #f7770f2b;
+    border-color: #ff572257;
+    padding: 3px;
+}
+
+.nav-link {
+    color: #712c66;
+}
+
+
+/* ********** Targetting Extra Small Devices ********** */
+
+@media (max-width: 576px) {
+
+    /* login form id */
+    #account {
+        max-width: 100%;
+    }
+
+    /* targetting input fields of the form */
+    .form-control {
+        width: 100%;
+    }
+
+}
+
+/* ********** Targetting Medium Devices ********** */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 738px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .section-intro {
+        padding: 60px 5vw;
+    }
+}
+
+/* ********** Targetting Large Devices ********** */
+
+@media (min-width: 992px) {
+
+    .login-form-section {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt',sans-serif;
+    color: #712c66;
+    background: #FFFAF0;
+    /*****/
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+
+/* ********** Sections On Different Pages ********** */
+
+.section-intro {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 400px;
+    width: 100%;
+    /* to avoid stretched text on bg screens*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5vw;
+}
+
+.error-section {
+    min-height: 400px;
+    width: 100%;
+    /* to avoid stretched text on bg screens*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 5vw;
+}
+
+.login-form-section {
+    min-height: 250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 5vw;
+}
+
+.email-confirm-section {
+    min-height: 250px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 5vw;
+}
+
+
+/* ********** Index Page And Its Animation ********** */
+
+
+#waves-top {
+    /*display: block;*/
+    width: 100%;
+    height: auto;
+}
+
+#waves-bottom {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(2) scale(1);
+    }
+
+    50% {
+        transform: translateY(-5px) scale(1.5);
+    }
+
+    100% {
+        transform: translateY(2) scale(1);
+    }
+}
+
+@keyframes move-down {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(10px) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.orange {
+    animation: move-up 22s infinite;
+}
+
+.red {
+    animation: move-down 22s infinite;
+}
+
+
+/* ********** Cat Animation On Default Landing Page ********** */
+
+.blob-motion {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    position: absolute;
+    transform: translateY(-70%);
+    z-index: 0;
+    margin: 10px;
+}
+
+.blob-content {
+    z-index: 1;
+}
+
+
+/* ********** Custom Modifications On Bootstrap Button Classes ********** */
+
+.btn {
+    border-radius: 0.85rem;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #543770, #543770);
+    border: none;
+    /*border-color: #543770;*/
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        /*border-color: #cc3557;*/
+        border: none;
+        background: linear-gradient(45deg, #a22c65, #cc3557);
+        transform: scale(1.05);
+    }
+
+    .btn-check:focus + .btn-primary, .btn-primary:focus {
+        color: #fff;
+        background-color: #cc3557;
+        /*border-color: #cc3557;*/
+        border: none;
+        box-shadow: 0 0 0 0.25rem rgba(234, 80, 62, 0.5) !important;
+    }
+
+    .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #543770;
+        border-color: #cc3557;
+    }
+
+.btn-secondary {
+    background: linear-gradient(45deg, #6c757d, #6c757d);
+    /*border-color: #6c757d;*/
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-secondary:hover {
+        color: #fff;
+        /*border-color: #cc3557;*/
+        border: none;
+        background: linear-gradient(45deg, #a22c65, #cc3557);
+        transform: scale(1.05);
+    }
+
+    .btn-check:focus + .btn-secondary, .btn-secondary:focus {
+        color: #fff;
+        background-color: #5c636a;
+        /*border-color: #565e64;*/
+        border: none;
+        box-shadow: 0 0 0 0.25rem rgba(234, 80, 62, 0.5) !important;
+    }
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #fb25c9;
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    padding: 0.5rem 0.5rem;
+}
+.btn-close:hover {
+    color: #192040;
+    text-decoration: none;
+    opacity: .75;
+}
+
+
+/* ********** Login Form ********** */
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #6123a8;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(234, 80, 62, 0.25);
+}
+
+.form-check-input:focus {
+    border-color: #6123a8;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(234, 80, 62, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #543770;
+    border-color: #543770;
+}
+
+
+/* *** Tab Navigation *** */
+
+.login-logout-card .card-header {
+    padding: 0px 0px 12px 0px;
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+}
+
+.login-logout-card li.nav-item {
+    width: 50%;
+}
+
+.login-logout-card a.nav-link {
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+    padding: 1rem;
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px;
+}
+
+
+/* Custom styles for the carousel */
+.carousel-inner {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    padding: 20px; /* Adds padding inside carousel items */
+}
+
+.card-body-f {
+    padding: 1.25rem;
+}
+
+
+/* Styles for carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    color: #000;
+    font-size: 24px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+
+/* Styles for carousel indicators */
+.carousel-indicators {
+    margin-bottom: 20px;
+}
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #007bff;
+    }
+
+    .carousel-indicators .active {
+        background-color: #0056b3;
+    }
+
+
+/* Modifications for deck create form */
+
+.deck-form-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.deck-form {
+   max-width: 500px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.form-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Modifications for delete deck page */
+
+.center-container {
+    height: 20vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.deck-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-pair{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.custom-dt {
+    margin-right: 30px;
+}
+
+
+/* *** USER LANDING PAGE ANIMATIONS *** */
+
+.heading {
+    flex: 1;
+    padding-right: 20px;
+    color: white;
+}
+
+.bulb-cont {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+    border-top: 5px solid black;
+}
+
+.wire {
+    left: auto;
+    width: 2px;
+    height: 150px;
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+
+.connector {
+    background: #292929;
+    width: 20px;
+    aspect-ratio: 4/5;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.grove {
+    background: #424242;
+    width: 24px;
+    height: 3px;
+    z-index: 3;
+}
+
+.bulb-container {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    transform-origin: top;
+    animation: swing 0s ease-in-out infinite;
+}
+
+.bulb {
+    margin-top: -2px;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: -1px;
+    z-index: 1;
+    /**/
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 0px 0px transparent;
+    transition: box-shadow 1s ease, background 1s ease;
+}
+
+.metal-wire {
+    position: relative;
+    border: 1px solid black;
+    width: 20px;
+    height: 11px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+    .metal-wire:nth-child(1) {
+        top: -1px;
+    }
+
+    .metal-wire:nth-child(2) {
+        top: -7px;
+    }
+
+    .metal-wire:nth-child(3) {
+        top: -13px;
+    }
+
+.bulb:hover {
+    background: #ffeb00;
+    box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    animation: flash 15s linear infinite;
+}
+
+/*.cat-wakeup:hover .bulb {*/
+/*background: #ffeb00;
+    box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);*/
+/*background: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 0px 0px transparent;
+    animation: flash 15s linear infinite;
+}*/
+
+/*@keyframes flash {
+    /*0% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*1% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    1.001% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    10% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    11.001% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    11.002% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*12% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    39.999% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    *40% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*41% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    /*41.001% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*75% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*75.5% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    /*75.501% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*80% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    81.001% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    81.002% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    82% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    82.001% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    82.002% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    83% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    83.001% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    83.002% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+
+    83.003% {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    88% {
+        background: rgba(255,235,0,1);
+        box-shadow: 0px 0px 150px 75px rgba(245,223,77,1);
+    }
+}*/
+
+.cat-container {
+    height: 500px;
+    width: 350px;
+    position: relative;
+    transform: translate(-50%, 10%);
+    left: 48%;
+    bottom: 0;
+}
+
+.cat {
+    background-color: #f7770f;
+    height: 65px;
+    width: 80px;
+    border-radius: 0 80px 80px 0;
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+}
+
+.ear {
+    height: 15px;
+    width: 15px;
+    background-color: #f7770f;
+    position: absolute;
+    bottom: 64px;
+    left: 8px;
+    border-radius: 20px 0 0 0;
+    box-shadow: 25px 0 #f7770f;
+}
+
+.eye, .eye:before {
+    height: 7px;
+    width: 10px;
+    border: 2px solid #2c2c2c;
+    position: absolute;
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+    /*
+    animation: open-eyes 0.3s forwards;*/
+}
+
+.eye {
+    top: 18px;
+    left: 15px;
+}
+
+    .eye:before {
+        content: "";
+        left: 30px;
+    }
+
+.nose {
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    box-shadow: 12px 0 #ffffff;
+}
+
+    .nose:before {
+        content: "";
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        background-color: #ffffff;
+        left: 6px;
+    }
+
+    .nose:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 8px solid #ef926b;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        bottom: 7px;
+        left: 6px;
+    }
+
+.mouth {
+    height: 15px;
+    width: 17px;
+    background-color: #2c2c2c;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: 38px;
+    left: 27px;
+    animation: mouth-move 2s infinite;
+    transform-origin: top;
+}
+
+@keyframes mouth-move {
+    50% {
+        transform: scaleY(0.7);
+    }
+}
+
+.cat-body {
+    background-color: #f7770f;
+    height: 90px;
+    width: 140px;
+    position: absolute;
+    right: 65px;
+    bottom: 0;
+    border-radius: 60px 60px 0 0;
+    animation: sleep 2s infinite;
+    transform-origin: bottom right;
+}
+
+@keyframes sleep {
+    50% {
+        transform: scale(0.9, 1.05);
+    }
+}
+
+.tail {
+    background-color: #d07219;
+    height: 20px;
+    width: 100px;
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.cat-body:before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 12px;
+    width: 30px;
+    left: 22px;
+    bottom: 0;
+    border-radius: 6px;
+    box-shadow: 45px 0 #ffffff;
+}
+
+.cat-bubble {
+    height: 20px;
+    width: 20px;
+    background-color: rgba(225, 255, 255, 0.4);
+    position: relative; /*absolute before bubble popping*/
+    top: 20px;
+    left: 65px;
+    border-radius: 50px 50px 50px 5px;
+    animation: bubble-scale 2s infinite;
+    /**/
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+    .cat-bubble::before,
+    .cat-bubble::after {
+        content: "";
+        width: 12px;
+        height: 6px;
+        background-color: rgba(225, 255, 255, 0.4);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px 50px 50px 50px;
+        opacity: 0;
+        transform-origin: center;
+        transition: all 0.3s;
+    }
+
+    .cat-bubble::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .cat-bubble::after {
+        transform: translate(-50%, -20%) rotate(-60deg);
+    }
+
+
+@keyframes bubble-scale {
+    50% {
+        transform: scale(1.6);
+    }
+}
+
+.cat-shadow {
+    height: 10px;
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 52px;
+    left: 60px;
+    animation: shadow 2s infinite;
+}
+
+@keyframes shadow {
+    50% {
+        transform: scaleX(0.7);
+    }
+}
+
+.practice-btn {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#sleepy-cat-btn {
+    font-size: 15px;
+    width: 30%;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.practice-btn:hover ~ .cat-wakeup .cat-container .cat .eye,
+.practice-btn:hover ~ .cat-wakeup .cat-container .cat .eye:before {
+    animation: open-eyes 0.3s forwards;
+}
+
+@keyframes open-eyes {
+    from {
+        height: 7px;
+        width: 10px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    to {
+        height: 10px;
+        width: 10px;
+        border: 2px solid #ffeb00;
+        background-color: #ffeb00;
+        border-radius: 5px 5px 5px 5px;
+    }
+}
+
+.cat-bubble:hover {
+    opacity: 0;
+}
+
+    .cat-bubble:hover::before,
+    .cat-bubble:hover::after {
+        opacity: 10;
+        width: 15px;
+        height: 9px;
+        transform: translate(-50%, -50%) rotate(45deg) scale(2);
+    }
+
+    .cat-bubble:hover::after {
+        transform: translate(-50%, -30%) rotate(65deg) scale(2);
+    }
